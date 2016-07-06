@@ -5,7 +5,7 @@ import {render} from 'react-dom';
 import css from './styles/style.styl';
 
 //Import components
-import Main from './components/Main.js';
+import App from './components/App.js';
 import Single from './components/Single.js';
 import PhotoGrid from './components/PhotoGrid.js';
 
@@ -17,7 +17,7 @@ import store, {history} from './store.js';
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={Main}>
+      <Route path="/" component={App}>
         <IndexRoute component={PhotoGrid}></IndexRoute>
         <Route path="/view/:postId" component={Single}></Route>
       </Route>
